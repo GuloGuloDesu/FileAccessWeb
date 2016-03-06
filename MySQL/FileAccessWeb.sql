@@ -68,3 +68,18 @@ CREATE TABLE lutblType
     TypePK bigint,
     FilePK bigint
     );
+
+CREATE USER 'ReadUser'@'localhost' IDENTIFIED BY 'Test123';
+GRANT SELECT ON FileAccessWeb.* TO 'ReadUser'@'localhost';
+
+CREATE USER 'WebAdmin'@'localhost' IDENTIFIED BY 'Test123';
+GRANT INSERT, UPDATE, SELECT, DELETE ON FileAccessWeb.tblUsers to 'WebAdmin'@'localhost';
+
+CREATE USER 'WriteUser'@'localhost' IDENTIFIED BY 'Test123';
+GRANT INSERT ON FileAccessWeb.tblLogonLog TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.tblFiles TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.tblTags TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.lutblTags TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.tblRating TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.tblType TO 'WriteUser'@'localhost';
+GRANT INSERT ON FileAccessWeb.lutblType TO 'WriteUser'@'localhost';
