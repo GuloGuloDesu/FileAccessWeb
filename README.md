@@ -11,3 +11,11 @@ Install MariaDB
 	sysrc mysql_enable=YES
 	service mysql-server start
 	mysql_secure_installation
+	
+Coding (ToDo)
+	Setup user access like the old FTP site
+	Database will need admin, read and write users
+		Admin will be used for creating new users
+		Read users will be any guests that want access
+		Write users will be ones who upload files and create tags
+		

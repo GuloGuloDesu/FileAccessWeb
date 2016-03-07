@@ -52,7 +52,7 @@ CREATE TABLE tblRating
     (
     pk bigint not null auto_increment primary key,
     Rating int,
-    FilePK bitint,
+    FilePK bigint,
     DateStamp date
     );
 
