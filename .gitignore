@@ -1,0 +1,9 @@
+*.txt
+DBCon.php
+*.swp
+*.swn
+*.swo
+*.swl
+*.swm
+*.pyc
+__pycache__
